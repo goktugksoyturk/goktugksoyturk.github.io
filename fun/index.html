@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fun — Göktuğ Kaan Soytürk</title>
+    <meta name="description" content="Outside of code. Two homes, hobbies, random facts." />
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/tokens.css" />
+    <link rel="stylesheet" href="/assets/css/base.css" />
+    <link rel="stylesheet" href="/assets/css/components.css" />
+    <link rel="stylesheet" href="/assets/css/subpage.css" />
+    <link rel="stylesheet" href="/assets/css/projects.css" />
+    <script>
+      (function () {
+        var t = localStorage.getItem("gks-theme");
+        if (t !== "dark" && t !== "light") t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="site-nav">
+      <a class="monogram" href="/" aria-label="Home">G.S.</a>
+      <div class="nav-right">
+        <nav class="nav-links" aria-label="Primary">
+          <a href="/projects/">projects</a>
+          <a href="/experience/">experience</a>
+          <a href="/about/">about</a>
+          <a href="/research/">research</a>
+          <a href="/fun/">fun</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Toggle theme">
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <a class="btn btn--accent" href="/contact/">connect ↗</a>
+      </div>
+    </header>
+
+    <main class="subpage">
+      <section class="subpage-head">
+        <p class="crumb"><a href="/">home</a> / fun</p>
+        <h1 class="subpage-title"><span class="num">05</span>Fun</h1>
+        <p class="subpage-blurb">Outside of code. Mostly things that don't ship.</p>
+      </section>
+
+      <div class="subpage-body">
+        <aside class="sidebar">
+          <div>
+            <h4>likes</h4>
+            <ul class="facts">
+              <li>black tea, no sugar</li>
+              <li>long walks</li>
+              <li>cold war history</li>
+              <li>old turkish music</li>
+              <li>cooking from youtube</li>
+            </ul>
+          </div>
+          <div>
+            <h4>note</h4>
+            <p class="quote">I'm not great at sports but I keep showing up.</p>
+          </div>
+        </aside>
+
+        <div class="content">
+          <div class="fun-grid">
+
+            <div class="frame" style="grid-column: span 8;">
+              <h3>Two homes</h3>
+              <p class="serif" style="color: var(--ink-soft); line-height: 1.6;">
+                Born in Turkey. Living in Mexico. Two homes, never just one of either. I miss simit and ezogelin soup. When I visit Turkey, I miss tacos al pastor. It's like that.
+              </p>
+              <div class="grid-2" style="margin-top: 18px;">
+                <div class="img-slot fun-image" data-slot="fun-turkey"><img src="/assets/img/fun/turkey.jpg" alt="Family in Turkey"></div>
+                <div class="img-slot fun-image" data-slot="fun-mexico"><img src="/assets/img/fun/mexico.jpg" alt="Friends in Mexico"></div>
+              </div>
+            </div>
+
+            <div class="frame" style="grid-column: span 4;">
+              <h3>What shaped me</h3>
+              <p class="serif" style="color: var(--ink-soft); line-height: 1.5; font-size: 0.98rem;">
+                Moving here when I was younger. Not knowing the language. Sitting in class catching every fifth word.
+              </p>
+            </div>
+
+            <div class="frame">
+              <h3>Current obsessions</h3>
+              <ul class="fact-list">
+                <li>Interactive web design that feels like a physical object</li>
+                <li>How encryption actually works under the hood</li>
+                <li>Building things people use, not demos</li>
+                <li>Padel, beat producing, phone photography</li>
+              </ul>
+            </div>
+
+            <div class="frame">
+              <h3>Building toward</h3>
+              <ul class="fact-list">
+                <li>A CS degree in Europe, full scholarship</li>
+                <li>Becoming an entrepreneur, running my own thing</li>
+                <li>A product more than 1000 people actually use</li>
+                <li>Five languages comfortably</li>
+              </ul>
+            </div>
+
+            <div class="frame">
+              <h3>Random facts</h3>
+              <ul class="fact-list">
+                <li>I think in three languages depending on the topic. Math in English, family stuff in Turkish, jokes in Spanish.</li>
+                <li>I drink tea more than coffee. Black tea, no sugar.</li>
+                <li>I'm in a car community. Trackdays every month and legal races at the track with friends and at events.</li>
+              </ul>
+            </div>
+
+            <div class="frame">
+              <h3>How I spend a week</h3>
+              <p class="serif" style="color: var(--ink-soft); line-height: 1.6;">
+                School. Internship. Side project. Track day if there is one. Family call back to Turkey. Repeat.
+              </p>
+            </div>
+
+            <div class="frame" style="grid-column: span 12;">
+              <h3>Hobbies</h3>
+              <p class="mono" style="color: var(--muted); font-size: 0.85rem; margin: 4px 0 14px;">click a tile to see more</p>
+              <div class="hobbies-grid">
+
+                <button type="button" class="hobby-card" data-detail='{
+                    "title": "Driving cars",
+                    "blurb": "I&#39;m in a car community. Trackdays every month and legal races with friends and at events.",
+                    "cover": "/assets/img/fun/driving.jpg",
+                    "previews": ["/assets/img/fun/driving/01.jpg","/assets/img/fun/driving/02.jpg","/assets/img/fun/driving/03.jpg","/assets/img/fun/driving/04.jpg"]
+                  }'>
+                  <div class="img-slot fun-image" data-slot="fun-hobby-driving"><img src="/assets/img/fun/driving.jpg" alt="At the track"></div>
+                  <p class="hobby-label">driving cars</p>
+                </button>
+
+                <button type="button" class="hobby-card" data-detail='{
+                    "title": "Padel",
+                    "blurb": "Padel is the one sport I actually play well.",
+                    "cover": "/assets/img/fun/padel.png",
+                    "previews": ["/assets/img/fun/padel/01.jpg"]
+                  }'>
+                  <div class="img-slot fun-image" data-slot="fun-hobby-padel"><img src="/assets/img/fun/padel.png" alt="Padel court"></div>
+                  <p class="hobby-label">padel</p>
+                </button>
+
+                <button type="button" class="hobby-card" data-detail='{
+                    "title": "Football",
+                    "blurb": "Varsity team at school. Mostly midfield.",
+                    "cover": "/assets/img/fun/football.jpg",
+                    "previews": ["/assets/img/fun/football/01.jpg","/assets/img/fun/football/02.jpg","/assets/img/fun/football/03.jpg"]
+                  }'>
+                  <div class="img-slot fun-image" data-slot="fun-hobby-football"><img src="/assets/img/fun/football.jpg" alt="Football boots"></div>
+                  <p class="hobby-label">football</p>
+                </button>
+
+                <button type="button" class="hobby-card" data-detail='{
+                    "title": "Shooting range",
+                    "blurb": "Started in Istanbul. Pistol mostly, paper targets, no live game.",
+                    "cover": "/assets/img/fun/shooting.jpg",
+                    "previews": ["/assets/img/fun/shooting/01.jpg","/assets/img/fun/shooting/02.jpg"]
+                  }'>
+                  <div class="img-slot fun-image" data-slot="fun-hobby-shooting"><img src="/assets/img/fun/shooting.jpg" alt="Shooting target"></div>
+                  <p class="hobby-label">shooting range</p>
+                </button>
+
+                <button type="button" class="hobby-card" data-detail='{
+                    "title": "Phone photography",
+                    "blurb": "Shooting whatever&#39;s in front of me. Just an iPhone.",
+                    "cover": "/assets/img/fun/photo.jpg",
+                    "previews": ["/assets/img/fun/photo/01.jpg","/assets/img/fun/photo/02.jpg","/assets/img/fun/photo/03.jpg"]
+                  }'>
+                  <div class="img-slot fun-image" data-slot="fun-hobby-photo"><img src="/assets/img/fun/photo.jpg" alt="Phone photo"></div>
+                  <p class="hobby-label">phone photography</p>
+                </button>
+
+              </div>
+            </div>
+
+            <div class="frame frame--accent" style="grid-column: span 12;">
+              <h3 style="color: var(--accent-ink);">What keeps me curious</h3>
+              <p class="serif" style="font-size: 1.25rem; line-height: 1.4; color: var(--accent-ink); max-width: 36ch;">
+                Most things are built by people who just decided to start. That's it. That's the whole secret.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Hobby detail overlay -->
+    <div class="overlay" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="overlay-card">
+        <button class="overlay-close" type="button" aria-label="Close">×</button>
+        <div class="img-slot cover"></div>
+        <div class="title-row">
+          <h2></h2>
+        </div>
+        <div class="body"></div>
+        <div class="preview-row"></div>
+      </div>
+    </div>
+
+    <div class="floating-preview" aria-hidden="true">
+      <img src="" alt="" onerror="this.onerror=null;this.src='/assets/img/placeholder.svg'">
+    </div>
+
+    <footer class="site-footer">
+      <span>© Göktuğ Kaan Soytürk · San Luis Potosí, MX</span>
+      <span>
+        <a href="https://github.com/goktugksoyturk" target="_blank" rel="noopener">github</a> ·
+        <a href="https://www.linkedin.com/in/göktuğ-kaan-soytürk/" target="_blank" rel="noopener">linkedin</a>
+      </span>
+    </footer>
+
+    <script src="/assets/js/utils.js" defer></script>
+    <script src="/assets/js/theme.js" defer></script>
+    <script src="/assets/js/nav.js" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const overlay = document.querySelector(".overlay");
+        if (!overlay) return;
+        const closeBtn = overlay.querySelector(".overlay-close");
+        const cover = overlay.querySelector(".cover");
+        const title = overlay.querySelector("h2");
+        const body = overlay.querySelector(".body");
+        const previewRow = overlay.querySelector(".preview-row");
+        const floating = document.querySelector(".floating-preview");
+        const floatingImg = floating ? floating.querySelector("img") : null;
+
+        function open(card) {
+          const data = JSON.parse(card.dataset.detail);
+          cover.innerHTML = `<img src="${data.cover}" alt="${data.title}">`;
+          title.textContent = data.title;
+          body.innerHTML = `<p>${data.blurb || ""}</p>`;
+          previewRow.innerHTML = `<span class="preview-label">photos</span>`;
+          (data.previews || []).forEach((src, idx) => {
+            const num = idx + 1;
+            const btn = document.createElement("button");
+            btn.className = "preview-num";
+            btn.type = "button";
+            btn.textContent = `{${num}}`;
+            btn.setAttribute("aria-label", `Photo ${num}`);
+            const show = () => {
+              if (!floating || !floatingImg) return;
+              const r = btn.getBoundingClientRect();
+              floating.style.left = (r.left + r.width / 2) + "px";
+              floating.style.top = r.top + "px";
+              floatingImg.src = src;
+              floatingImg.alt = `${data.title} photo ${num}`;
+              floating.classList.add("show");
+              btn.classList.add("is-active");
+            };
+            const hide = () => {
+              floating && floating.classList.remove("show");
+              btn.classList.remove("is-active");
+            };
+            btn.addEventListener("mouseenter", show);
+            btn.addEventListener("focus", show);
+            btn.addEventListener("mouseleave", hide);
+            btn.addEventListener("blur", hide);
+            previewRow.appendChild(btn);
+          });
+          overlay.classList.add("show");
+          overlay.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
+        }
+
+        function close() {
+          overlay.classList.remove("show");
+          overlay.setAttribute("aria-hidden", "true");
+          document.body.style.overflow = "";
+          floating && floating.classList.remove("show");
+        }
+
+        document.querySelectorAll(".hobby-card").forEach((card) => {
+          card.addEventListener("click", () => open(card));
+          card.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              open(card);
+            }
+          });
+        });
+
+        closeBtn && closeBtn.addEventListener("click", close);
+        overlay.addEventListener("click", (e) => { if (e.target === overlay) close(); });
+        document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
+      });
+    </script>
+  </body>
+</html>

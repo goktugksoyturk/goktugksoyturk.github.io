@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 156" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="folderShade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="currentColor" stop-opacity="1"/>
+      <stop offset="1" stop-color="currentColor" stop-opacity="0.78"/>
+    </linearGradient>
+  </defs>
+  <path d="M10 30 L10 138 Q10 146 18 146 L162 146 Q170 146 170 138 L170 50 Q170 42 162 42 L92 42 L78 28 Q74 24 70 24 L18 24 Q10 24 10 30 Z"
+        fill="url(#folderShade)" stroke="#0a0a0a" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M16 56 L164 56 L164 60 L16 60 Z" fill="#ffffff" fill-opacity="0.45"/>
+  <path d="M22 50 L162 50 L168 138 Q168 142 162 142 L20 142 Q14 142 14 138 Z"
+        fill="currentColor" fill-opacity="0.06" stroke="#0a0a0a" stroke-width="3" stroke-linejoin="round"/>
+</svg>

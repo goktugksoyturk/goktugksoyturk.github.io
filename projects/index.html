@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projects — Göktuğ Kaan Soytürk</title>
+    <meta
+      name="description"
+      content="Things I built. Android apps, web apps, AI tools, and one bike shop website."
+    />
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/tokens.css" />
+    <link rel="stylesheet" href="/assets/css/base.css" />
+    <link rel="stylesheet" href="/assets/css/components.css" />
+    <link rel="stylesheet" href="/assets/css/subpage.css" />
+    <link rel="stylesheet" href="/assets/css/projects.css" />
+    <script>
+      (function () {
+        var t = localStorage.getItem("gks-theme");
+        if (t !== "dark" && t !== "light")
+          t = matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="site-nav">
+      <a class="monogram" href="/" aria-label="Home">G.S.</a>
+      <div class="nav-right">
+        <nav class="nav-links" aria-label="Primary">
+          <a href="/projects/">projects</a>
+          <a href="/experience/">experience</a>
+          <a href="/about/">about</a>
+          <a href="/research/">research</a>
+          <a href="/fun/">fun</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Toggle theme">
+          <svg
+            class="moon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+          <svg
+            class="sun"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+            />
+          </svg>
+        </button>
+        <a class="btn btn--accent" href="/contact/">connect ↗</a>
+      </div>
+    </header>
+
+    <main class="subpage">
+      <section class="subpage-head">
+        <p class="crumb"><a href="/">home</a> / projects</p>
+        <h1 class="subpage-title"><span class="num">02</span>Projects</h1>
+        <p class="subpage-blurb">
+          Things I built. Click a card to see screenshots. Hover the numbers
+          inside to preview them.
+        </p>
+      </section>
+
+      <div class="subpage-body">
+        <aside class="sidebar">
+          <div>
+            <h4>filter</h4>
+            <div
+              class="filter-bar"
+              role="tablist"
+              aria-label="Project category"
+            >
+              <button data-cat="all" aria-pressed="true" type="button">
+                all
+              </button>
+              <button data-cat="tech" aria-pressed="false" type="button">
+                tech
+              </button>
+              <button data-cat="ai" aria-pressed="false" type="button">
+                ai
+              </button>
+              <button data-cat="saas" aria-pressed="false" type="button">
+                saas
+              </button>
+              <button data-cat="leadership" aria-pressed="false" type="button">
+                leadership
+              </button>
+            </div>
+          </div>
+          <div>
+            <h4>note</h4>
+            <p class="quote">
+              Most things are built by people who just decided to start.
+            </p>
+          </div>
+        </aside>
+
+        <div class="content">
+          <div class="project-grid">
+            <button
+              class="project-card"
+              type="button"
+              data-cats="tech,leadership"
+              data-detail='{
+                "title": "A Paso Seguro",
+                "date": "2024 — 2025",
+                "coverSlot": "proj-aps-cover",
+                "cover": "/assets/img/projects/aps/cover.jpg",
+                "link": "https://github.com/goktugksoyturk/WebsiteAPS",
+                "linkLabel": "take me to repo",
+                "body": "<p>An Android app helping people navigate nightlife safely in San Luis Potosí. Built with a team spread across 5 countries, tied to UN SDG 11.</p><p>I led the project and worked on the app in Android Studio. Most of the work was navigation, core features, and some UX calls.</p>",
+                "previews": ["/assets/img/projects/aps/01.png","/assets/img/projects/aps/02.png","/assets/img/projects/aps/03.png"]
+              }'
+            >
+              <div class="img-slot" data-slot="proj-aps-cover">
+                <img
+                  src="/assets/img/projects/aps/cover.jpg"
+                  alt="A Paso Seguro cover"
+                  onerror="
+                    this.onerror = null;
+                    this.src = '/assets/img/placeholder.svg';
+                  "
+                />
+              </div>
+              <h3>A Paso Seguro</h3>
+              <p class="desc">
+                Android app for safer nightlife in SLP. UN SDG 11. Multicultural
+                team.
+              </p>
+              <div class="row">
+                <div class="tags">
+                  <span class="tag">android</span>
+                  <span class="tag">SDG 11</span>
+                </div>
+                <span class="mono">↗</span>
+              </div>
+            </button>
+
+            <button
+              class="project-card"
+              type="button"
+              data-cats="tech,ai,saas"
+              data-detail='{
+                "title": "Mr Appointment",
+                "date": "2025",
+                "coverSlot": "proj-mrappt-cover",
+                "cover": "/assets/img/projects/mrappt/cover.png",
+                "link": "https://mr-appointment.vercel.app",
+                "linkLabel": "take me to website",
+                "body": "<p>AI-powered system that automates appointment booking and cuts down on no-shows for clinics. Handles scheduling and reminders in one flow.</p>",
+                "previews": ["/assets/img/projects/mrappt/01.png","/assets/img/projects/mrappt/02.png","/assets/img/projects/mrappt/03.png","/assets/img/projects/mrappt/04.png"]
+              }'
+            >
+              <div class="img-slot" data-slot="proj-mrappt-cover">
+                <img
+                  src="/assets/img/projects/mrappt/cover.png"
+                  alt="Mr Appointment cover"
+                  onerror="
+                    this.onerror = null;
+                    this.src = '/assets/img/placeholder.svg';
+                  "
+                />
+              </div>
+              <h3>Mr Appointment</h3>
+              <p class="desc">AI booking and no-show reduction for clinics.</p>
+              <div class="row">
+                <div class="tags">
+                  <span class="tag">ai</span>
+                  <span class="tag">automation</span>
+                  <span class="tag">healthcare</span>
+                </div>
+                <span class="mono">↗</span>
+              </div>
+            </button>
+
+            <button
+              class="project-card"
+              type="button"
+              data-cats="tech,saas"
+              data-detail='{
+                "title": "Comsinves",
+                "date": "2025",
+                "coverSlot": "proj-comsinves-cover",
+                "cover": "/assets/img/projects/comsinves/cover.png",
+                "link": "https://comsinves.tech",
+                "linkLabel": "take me to website",
+                "body": "<p>All-in-one platform to track, manage, and understand investments across different asset classes in one clear dashboard.</p>",
+                "previews": ["/assets/img/projects/comsinves/01.png","/assets/img/projects/comsinves/02.png","/assets/img/projects/comsinves/03.png","/assets/img/projects/comsinves/04.png","/assets/img/projects/comsinves/05.png"]
+              }'
+            >
+              <div class="img-slot" data-slot="proj-comsinves-cover">
+                <img
+                  src="/assets/img/projects/comsinves/cover.png"
+                  alt="Comsinves cover"
+                  onerror="
+                    this.onerror = null;
+                    this.src = '/assets/img/placeholder.svg';
+                  "
+                />
+              </div>
+              <h3>Comsinves</h3>
+              <p class="desc">Investment intelligence dashboard.</p>
+              <div class="row">
+                <div class="tags">
+                  <span class="tag">saas</span>
+                  <span class="tag">investments</span>
+                  <span class="tag">analytics</span>
+                </div>
+                <span class="mono">↗</span>
+              </div>
+            </button>
+
+            <button
+              class="project-card"
+              type="button"
+              data-cats="tech,growth,marketing"
+              data-detail='{
+                "title": "Ludi",
+                "date": "2024 — 2025",
+                "coverSlot": "proj-ludi-cover",
+                "cover": "/assets/img/projects/ludi/cover.png",
+                "link": "https://chlorinated-thumb-43a.notion.site/Ludi-Task-4-11d48845629e8055af30d9d887e61c94",
+                "linkLabel": "take me to website",
+                "body": "<p>Designed growth strategies to scale Ludi from 80,000 to 150,000 users. Developed a LinkedIn micro-targeting plan focused on young professionals and graduates, including A/B ad testing, cold outreach structures, webinar funnels, and user acquisition optimizations. Built structured lead databases for sales.</p>",
+                "previews": ["/assets/img/projects/ludi/01.png","/assets/img/projects/ludi/02.png","/assets/img/projects/ludi/03.png","/assets/img/projects/ludi/04.png","/assets/img/projects/ludi/05.png"]
+              }'
+            >
+              <div class="img-slot" data-slot="proj-ludi-cover">
+                <img
+                  src="/assets/img/projects/ludi/cover.png"
+                  alt="Ludi growth strategy project cover"
+                  onerror="
+                    this.onerror = null;
+                    this.src = '/assets/img/placeholder.svg';
+                  "
+                />
+              </div>
+              <h3>Ludi</h3>
+              <p class="desc">
+                Growth strategy and micro-targeting to scale user acquisition.
+              </p>
+              <div class="row">
+                <div class="tags">
+                  <span class="tag">growth</span>
+                  <span class="tag">marketing</span>
+                  <span class="tag">strategy</span>
+                </div>
+                <span class="mono">↗</span>
+              </div>
+            </button>
+
+            <button
+              class="project-card"
+              type="button"
+              data-cats="tech,design,web"
+              data-detail='{
+                "title": "Moodly",
+                "date": "2025",
+                "coverSlot": "proj-moodly-cover",
+                "cover": "/assets/img/projects/moodly/cover.png",
+                "link": "https://www.figma.com/site/wLtJ4YUqLCWPfTIrXNzPEQ/Moldly?node-id=0-1&t=Q6hAkih1Q8Am8cMc-1",
+                "linkLabel": "take me to website",
+                "body": "<p>Co-created a modern moodboard website using Figma and no-code web design tools. Designed the visual identity, layout system, and user experience. Developed responsive page structures, curated aesthetic imagery, and optimized the site for clean presentation and easy navigation. Collaborated closely with partner on creative direction, content selection, and UI styling.</p>",
+                "previews": ["/assets/img/projects/moodly/01.png","/assets/img/projects/moodly/02.png","/assets/img/projects/moodly/03.png","/assets/img/projects/moodly/04.png","/assets/img/projects/moodly/05.png"]
+              }'
+            >
+              <div class="img-slot" data-slot="proj-moodly-cover">
+                <img
+                  src="/assets/img/projects/moodly/cover.png"
+                  alt="Moodly moodboard website cover"
+                  onerror="
+                    this.onerror = null;
+                    this.src = '/assets/img/placeholder.svg';
+                  "
+                />
+              </div>
+              <h3>Moodly</h3>
+              <p class="desc">
+                Co-created moodboard website with Figma and no-code tools.
+              </p>
+              <div class="row">
+                <div class="tags">
+                  <span class="tag">design</span>
+                  <span class="tag">ui/ux</span>
+                  <span class="tag">web</span>
+                </div>
+                <span class="mono">↗</span>
+              </div>
+            </button>
+
+            <button
+              class="project-card"
+              type="button"
+              data-cats="tech"
+              data-detail='{
+                "title": "JMB311",
+                "date": "2024",
+                "coverSlot": "proj-jmb311-cover",
+                "cover": "/assets/img/projects/jmb311/cover.png",
+                "link": "https://jmb-311-website--goktugksoyturk.replit.app",
+                "linkLabel": "take me to website",
+                "body": "<p>A website for a bike shop. Focused on clear product presentation, service visibility, and smooth customer navigation.</p>",
+                "previews": ["/assets/img/projects/jmb311/01.png","/assets/img/projects/jmb311/02.png","/assets/img/projects/jmb311/03.png","/assets/img/projects/jmb311/04.png","/assets/img/projects/jmb311/05.jpg"]
+              }'
+            >
+              <div class="img-slot" data-slot="proj-jmb311-cover">
+                <img
+                  src="/assets/img/projects/jmb311/cover.png"
+                  alt="JMB311 bike shop website on a laptop"
+                />
+              </div>
+              <h3>JMB311</h3>
+              <p class="desc">Bike shop website. Clear products, easy nav.</p>
+              <div class="row">
+                <div class="tags">
+                  <span class="tag">web</span>
+                  <span class="tag">frontend</span>
+                  <span class="tag">retail</span>
+                </div>
+                <span class="mono">↗</span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Detail overlay -->
+    <div class="overlay" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="overlay-card">
+        <div class="overlay-actions">
+          <a
+            class="btn btn--accent btn--lg overlay-visit"
+            href="#"
+            target="_blank"
+            rel="noopener"
+            hidden
+            >take me to website ↗</a
+          >
+          <button class="overlay-close" type="button" aria-label="Close">
+            ×
+          </button>
+        </div>
+        <div class="img-slot cover" data-slot=""></div>
+        <div class="title-row">
+          <h2></h2>
+          <span class="date"></span>
+        </div>
+        <div class="body"></div>
+        <div class="preview-row"></div>
+      </div>
+    </div>
+
+    <div class="floating-preview" aria-hidden="true">
+      <img
+        src=""
+        alt=""
+        onerror="
+          this.onerror = null;
+          this.src = '/assets/img/placeholder.svg';
+        "
+      />
+    </div>
+
+    <footer class="site-footer">
+      <span>© Göktuğ Kaan Soytürk · San Luis Potosí, MX</span>
+      <span>
+        <a
+          href="https://github.com/goktugksoyturk"
+          target="_blank"
+          rel="noopener"
+          >github</a
+        >
+        ·
+        <a
+          href="https://www.linkedin.com/in/göktuğ-kaan-soytürk/"
+          target="_blank"
+          rel="noopener"
+          >linkedin</a
+        >
+      </span>
+    </footer>
+
+    <script src="/assets/js/utils.js" defer></script>
+    <script src="/assets/js/theme.js" defer></script>
+    <script src="/assets/js/nav.js" defer></script>
+    <script src="/assets/js/projects.js" defer></script>
+  </body>
+</html>

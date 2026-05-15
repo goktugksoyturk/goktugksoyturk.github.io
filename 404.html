@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>404 — Göktuğ Kaan Soytürk</title>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/tokens.css" />
+    <link rel="stylesheet" href="/assets/css/base.css" />
+    <link rel="stylesheet" href="/assets/css/components.css" />
+    <link rel="stylesheet" href="/assets/css/subpage.css" />
+    <script>
+      (function () {
+        var t = localStorage.getItem("gks-theme");
+        if (t !== "dark" && t !== "light") t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script>
+    <style>
+      .not-found {
+        min-height: calc(100svh - 88px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px var(--gutter);
+      }
+      .not-found .frame {
+        max-width: 540px;
+        text-align: center;
+      }
+      .not-found h1 {
+        font-size: clamp(3rem, 10vw, 5rem);
+        line-height: 0.95;
+        margin-bottom: 16px;
+      }
+      .not-found p {
+        font-family: var(--font-serif);
+        color: var(--ink-soft);
+        margin-bottom: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-nav">
+      <a class="monogram" href="/" aria-label="Home">G.S.</a>
+      <div class="nav-right">
+        <button class="theme-toggle" type="button" aria-label="Toggle theme">
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <a class="btn btn--accent" href="/">home ↗</a>
+      </div>
+    </header>
+
+    <main class="not-found">
+      <div class="frame">
+        <p class="mono" style="color: var(--muted); margin-bottom: 12px;">404</p>
+        <h1>This page doesn't exist.</h1>
+        <p>Maybe a typo. Maybe I never built it. Either way, go home.</p>
+        <a class="btn btn--accent btn--lg" href="/">back to home →</a>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <span>© Göktuğ Kaan Soytürk · San Luis Potosí, MX</span>
+      <span>
+        <a href="https://github.com/goktugksoyturk" target="_blank" rel="noopener">github</a> ·
+        <a href="https://www.linkedin.com/in/göktuğ-kaan-soytürk/" target="_blank" rel="noopener">linkedin</a>
+      </span>
+    </footer>
+
+    <script src="/assets/js/theme.js" defer></script>
+  </body>
+</html>

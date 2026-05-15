@@ -1,760 +1,200 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Göktuğ Kaan Soytürk — Developer & Entrepreneur</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="shortcut icon" type="png" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Göktuğ Kaan Soytürk — Developer · Researcher · Entrepreneur</title>
+    <meta name="description" content="17-year-old Turkish developer living in Mexico. IB Diploma, junior dev, four languages. I build software and write about what I learn." />
 
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="/assets/css/tokens.css" />
+    <link rel="stylesheet" href="/assets/css/base.css" />
+    <link rel="stylesheet" href="/assets/css/components.css" />
+    <link rel="stylesheet" href="/assets/css/home.css" />
+
+    <script>
+      (function () {
+        var t = localStorage.getItem("gks-theme");
+        if (t !== "dark" && t !== "light") {
+          t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.setAttribute("data-theme", t);
+
+        try {
+          var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+          if (!reduce) {
+            document.documentElement.classList.add("intro-active");
+          }
+        } catch (_) {}
+      })();
+    </script>
   </head>
   <body>
-    <div class="cursor" id="cursor"></div>
-    <div class="cursor-ring" id="cursorRing"></div>
-
-    <div class="bg-mesh">
-      <div class="mesh-orb"></div>
-      <div class="mesh-orb"></div>
-      <div class="mesh-orb"></div>
+    <div class="intro-overlay" aria-hidden="true">
+      <svg class="intro-mark" viewBox="0 0 280 80" aria-label="G.S.">
+        <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central"
+              font-family="'Space Grotesk', sans-serif" font-weight="700"
+              font-size="64" letter-spacing="-2">G.S.</text>
+      </svg>
     </div>
-    <div class="grid-bg"></div>
-
-    <nav>
-      <div class="nav-logo">GKS</div>
-      <div class="nav-links">
-        <a href="#experience">Experience</a>
-        <a href="#research">Research</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+    <header class="site-nav">
+      <a class="monogram" href="/" aria-label="Home">G.S.</a>
+      <div class="nav-right">
+        <nav class="nav-links" aria-label="Primary">
+          <a href="/projects/">projects</a>
+          <a href="/experience/">experience</a>
+          <a href="/about/">about</a>
+          <a href="/research/">research</a>
+          <a href="/fun/">fun</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Toggle theme">
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <a class="btn btn--accent" href="/contact/">connect ↗</a>
       </div>
-    </nav>
+    </header>
 
-    <div class="scroll-progress" id="scrollProgress"></div>
+    <main class="home">
+      <section class="hero">
+        <div class="hero-status">
+          <span class="pill pill--accent">
+            <span class="dot"></span> IB Diploma · Junior Dev @ Fotofacturas · San Luis Potosí
+          </span>
+        </div>
 
-    <div class="hero">
-      <div class="hero-eyebrow">
-        <div class="hero-dot"></div>
-        <span class="hero-eyebrow-text"
-          >IB Diploma · San Luis Potosí, MX · Junior Developer @
-          Fotofacturas</span
-        >
-      </div>
-      <h1 class="hero-headline">
-        GÖKTUĞ<br />
-        <span class="line2">KAAN</span>
-        <span class="line3">SOYTÜRK</span>
-      </h1>
-      <div class="hero-sub-row">
-        <p class="hero-desc">
-          Developer, entrepreneur & researcher. I work on real projects, lead
-          teams across different countries, and spend time looking into things
-          that genuinely interest me — whether that's code, economics, or
-          history. I'm 17 and based in Mexico.
+        <h1 class="hero-headline">
+          <span class="word" style="--d: 0.2s">I'm</span>
+          <span class="word" style="--d: 0.3s">Göktuğ,</span>
+          <span class="word" style="--d: 0.4s">a</span>
+          <span class="word" style="--d: 0.5s">
+            <span class="role-cycler" data-roles="Developer,Researcher,Entrepreneur">
+              <span class="role-text">Developer</span>
+            </span>
+          </span>
+        </h1>
+
+        <p class="hero-subline">
+          17. Turkish. Living in Mexico. Building stuff, mostly software.
         </p>
-        <div class="hero-cta-col">
-          <div class="hero-cta">
-            <a
-              href="https://www.linkedin.com/in/göktuğ-kaan-soytürk/"
-              target="_blank"
-              class="btn btn-gold"
-              >LinkedIn ↗</a
-            >
-            <a
-              href="https://github.com/goktugksoyturk"
-              target="_blank"
-              class="btn btn-ghost"
-              >GitHub ↗</a
-            >
-          </div>
-          <div class="hero-location">📍 San Luis Potosí, Mexico</div>
-        </div>
-      </div>
-    </div>
 
-    <div class="marquee-bar">
-      <div class="marquee-track">
-        <span class="marquee-item">JavaScript</span>
-        <span class="marquee-item">React</span>
-        <span class="marquee-item">Android Studio</span>
-        <span class="marquee-item">Project Leadership</span>
-        <span class="marquee-item">UN SDG 11</span>
-        <span class="marquee-item">IB Diploma</span>
-        <span class="marquee-item">4 Languages</span>
-        <span class="marquee-item">5 Countries</span>
-        <span class="marquee-item">Financial Research</span>
-        <span class="marquee-item">Encryption & Math</span>
-        <span class="marquee-item">Frontend Dev</span>
-        <span class="marquee-item">Currently Interning</span>
-      </div>
-    </div>
+        <div class="folders-stage" aria-label="Section folders">
+          <a class="folder" href="/projects/" data-color="#f5c84b" style="left: 8%; top: 10%;">
+            <span class="folder-icon" style="color: #f5c84b;">
+              <svg viewBox="0 0 180 156" fill="none" aria-hidden="true">
+                <path d="M10 30 L10 138 Q10 146 18 146 L162 146 Q170 146 170 138 L170 50 Q170 42 162 42 L92 42 L78 28 Q74 24 70 24 L18 24 Q10 24 10 30 Z" fill="currentColor" stroke="#0a0a0a" stroke-width="3" stroke-linejoin="round"/>
+                <path d="M22 50 L162 50 L168 138 Q168 142 162 142 L20 142 Q14 142 14 138 Z" fill="rgba(0,0,0,0.06)" stroke="#0a0a0a" stroke-width="3" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="folder-tag">things I built</span>
+            <span class="folder-label">projects</span>
+          </a>
 
-    <div class="stats-row reveal">
-      <div class="stat-box">
-        <div class="stat-n">5+</div>
-        <div class="stat-l">Countries Collaborated</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-n">4</div>
-        <div class="stat-l">Languages Spoken</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-n">7+</div>
-        <div class="stat-l">Roles & Projects</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-n">30+</div>
-        <div class="stat-l">Community Members Led</div>
-      </div>
-    </div>
+          <a class="folder" href="/experience/" data-color="#f5c84b" style="left: 30%; top: 32%;">
+            <span class="folder-icon" style="color: #f5c84b;">
+              <svg viewBox="0 0 180 156" fill="none" aria-hidden="true">
+                <path d="M10 30 L10 138 Q10 146 18 146 L162 146 Q170 146 170 138 L170 50 Q170 42 162 42 L92 42 L78 28 Q74 24 70 24 L18 24 Q10 24 10 30 Z" fill="currentColor" stroke="#0a0a0a" stroke-width="3" stroke-linejoin="round"/>
+                <path d="M22 50 L162 50 L168 138 Q168 142 162 142 L20 142 Q14 142 14 138 Z" fill="rgba(0,0,0,0.06)" stroke="#0a0a0a" stroke-width="3" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="folder-tag">where I worked</span>
+            <span class="folder-label">experience</span>
+          </a>
 
-    <!-- EXPERIENCE -->
-    <section id="experience">
-      <div class="sec-label reveal">
-        <span class="sec-num">01</span>
-        <h2 class="sec-title">Experience</h2>
-        <div class="sec-line"></div>
-      </div>
-      <div class="exp-list">
-        <div class="exp-card reveal">
-          <div class="exp-num-big">01</div>
-          <div>
-            <div class="exp-role">Junior Developer Intern</div>
-            <div class="exp-co">Fotofacturas</div>
-            <p class="exp-desc">
-              Learning frontend development hands-on — working with JavaScript
-              and React on real UI components inside a professional codebase.
-              First proper dev job.
-            </p>
-            <div class="tags">
-              <span class="tag">JavaScript</span><span class="tag">React</span
-              ><span class="tag">Frontend</span>
-            </div>
-          </div>
-          <div class="exp-aside">
-            <div class="exp-date">Mar 2026<br />Present</div>
-            <span class="exp-badge badge-live">● Live</span>
-          </div>
-        </div>
-        <div class="exp-card reveal">
-          <div class="exp-num-big">02</div>
-          <div>
-            <div class="exp-role">Project Leader</div>
-            <div class="exp-co">A Paso Seguro</div>
-            <p class="exp-desc">
-              Led a team of developers from 5 different countries on an Android
-              app for nightlife safety in SLP. The project is built around UN
-              SDG 11 and was a good lesson in keeping people aligned across time
-              zones and languages.
-            </p>
-            <div class="tags">
-              <span class="tag">Leadership</span><span class="tag">Android</span
-              ><span class="tag tag-teal">SDG 11</span
-              ><span class="tag">5 Countries</span>
-            </div>
-          </div>
-          <div class="exp-aside">
-            <div class="exp-date">Oct 2024<br />May 2025</div>
-            <span class="exp-badge">Part-time</span>
-          </div>
-        </div>
-        <div class="exp-card reveal">
-          <div class="exp-num-big">03</div>
-          <div>
-            <div class="exp-role">App Developer</div>
-            <div class="exp-co">A Paso Seguro</div>
-            <p class="exp-desc">
-              Worked on the Android app in Android Studio — handled core
-              features, navigation, and some of the UX decisions.
-            </p>
-            <div class="tags">
-              <span class="tag">Android Studio</span
-              ><span class="tag">Java</span><span class="tag">UX</span>
-            </div>
-          </div>
-          <div class="exp-aside">
-            <div class="exp-date">Sep 2024<br />May 2025</div>
-            <span class="exp-badge">Part-time</span>
-          </div>
-        </div>
-        <div class="exp-card reveal">
-          <div class="exp-num-big">04</div>
-          <div>
-            <div class="exp-role">Marketing & Social Media Officer</div>
-            <div class="exp-co">Motocity & Bike</div>
-            <p class="exp-desc">
-              Helped run ad campaigns and social media for a local motorcycle
-              brand. Ran some A/B tests and handled content scheduling.
-            </p>
-            <div class="tags">
-              <span class="tag">Marketing</span
-              ><span class="tag">A/B Testing</span
-              ><span class="tag">Social Media</span>
-            </div>
-          </div>
-          <div class="exp-aside">
-            <div class="exp-date">Jun 2024<br />Sep 2024</div>
-            <span class="exp-badge">Part-time</span>
-          </div>
-        </div>
-        <div class="exp-card reveal">
-          <div class="exp-num-big">05</div>
-          <div>
-            <div class="exp-role">Founder</div>
-            <div class="exp-co">International Turkish Students Community</div>
-            <p class="exp-desc">
-              Started a small community for Turkish students studying abroad.
-              Grew to 30+ members across 6 countries — mainly sharing
-              experiences and helping people figure out the process.
-            </p>
-            <div class="tags">
-              <span class="tag">Community</span
-              ><span class="tag">Leadership</span
-              ><span class="tag">International</span>
-            </div>
-          </div>
-          <div class="exp-aside">
-            <div class="exp-date">Mar 2024<br />Sep 2024</div>
-            <span class="exp-badge">Founder</span>
-          </div>
-        </div>
-        <div class="exp-card reveal">
-          <div class="exp-num-big">06</div>
-          <div>
-            <div class="exp-role">Marketing Team Member</div>
-            <div class="exp-co">Trajectory Education</div>
-            <p class="exp-desc">
-              Contributed to campaigns for an edtech startup later acquired by
-              Snowday Education. Fully remote, international team.
-            </p>
-            <div class="tags">
-              <span class="tag">Campaigns</span><span class="tag">Remote</span
-              ><span class="tag">EdTech</span>
-            </div>
-          </div>
-          <div class="exp-aside">
-            <div class="exp-date">May 2024<br />Jun 2024</div>
-            <span class="exp-badge">Remote</span>
-          </div>
-        </div>
-      </div>
-    </section>
+          <a class="folder" href="/about/" data-color="#f5c84b" style="left: 52%; top: 8%;">
+            <span class="folder-icon" style="color: #f5c84b;">
+              <svg viewBox="0 0 180 156" fill="none" aria-hidden="true">
+                <path d="M10 30 L10 138 Q10 146 18 146 L162 146 Q170 146 170 138 L170 50 Q170 42 162 42 L92 42 L78 28 Q74 24 70 24 L18 24 Q10 24 10 30 Z" fill="currentColor" stroke="#0a0a0a" stroke-width="3" stroke-linejoin="round"/>
+                <path d="M22 50 L162 50 L168 138 Q168 142 162 142 L20 142 Q14 142 14 138 Z" fill="rgba(0,0,0,0.06)" stroke="#0a0a0a" stroke-width="3" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="folder-tag">who I am</span>
+            <span class="folder-label">about</span>
+          </a>
 
-    <!-- RESEARCH -->
-    <section id="research" class="alt">
-      <div class="sec-label reveal">
-        <span class="sec-num">02</span>
-        <h2 class="sec-title">Research</h2>
-        <div class="sec-line"></div>
-      </div>
-      <div
-        class="research-grid"
-        style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))"
-      >
-        <div class="research-card reveal">
-          <span class="research-icon">🔐</span>
-          <div class="research-topic">Encryption & Mathematics</div>
-          <div class="research-type">IB Extended Essay · Completed</div>
-          <p class="research-desc">
-            Looked into the math behind modern encryption — things like number
-            theory, modular arithmetic, and how public-key systems actually work
-            under the hood.
-          </p>
-          <div class="tags" style="margin-top: 1rem">
-            <span class="tag tag-teal">Cryptography</span
-            ><span class="tag tag-teal">Number Theory</span
-            ><span class="tag tag-teal">IB EE</span>
-          </div>
-        </div>
-        <div class="research-card reveal">
-          <span class="research-icon">📈</span>
-          <div class="research-topic">
-            Exchange Rates & Interest Rates in Turkey (2014–2024)
-          </div>
-          <div class="research-type">Quantitative Research · Economics</div>
-          <p class="research-desc">
-            Tried to figure out whether Turkey's exchange rate and interest rate
-            movements were actually correlated over the past decade — a period
-            where monetary policy was pretty chaotic.
-          </p>
-          <div class="tags" style="margin-top: 1rem">
-            <span class="tag tag-teal">Econometrics</span
-            ><span class="tag tag-teal">Turkey</span
-            ><span class="tag tag-teal">Monetary Policy</span>
-          </div>
-        </div>
-        <div class="research-card reveal">
-          <span class="research-icon">🚀</span>
-          <div class="research-topic">Google's Exponential Growth</div>
-          <div class="research-type">Technology & Strategy Research</div>
-          <p class="research-desc">
-            Looked at what actually drove Google's growth from a search engine
-            into the infrastructure it is today — and tried to map the math of
-            exponential growth onto it.
-          </p>
-          <div class="tags" style="margin-top: 1rem">
-            <span class="tag tag-teal">Exponential Growth</span
-            ><span class="tag tag-teal">Big Tech</span
-            ><span class="tag tag-teal">Strategy</span>
-          </div>
-        </div>
-        <div class="research-card reveal">
-          <span class="research-icon">🇹🇷</span>
-          <div class="research-topic">
-            Why Was Atatürk so Important in Turkey's Independence War?
-          </div>
-          <div class="research-type">History Research · IB</div>
-          <p class="research-desc">
-            Researched Atatürk's role in the Turkish War of Independence — his
-            military decisions, political maneuvering, and why the outcome of
-            that war likely looked very different without him.
-          </p>
-          <div class="tags" style="margin-top: 1rem">
-            <span class="tag tag-teal">Turkish History</span
-            ><span class="tag tag-teal">WWI Era</span
-            ><span class="tag tag-teal">IB History</span>
-          </div>
-        </div>
-        <div class="research-card reveal">
-          <span class="research-icon">🌿</span>
-          <div class="research-topic">How Pollution Affects Plant Growth</div>
-          <div class="research-type">Biology Research · IB</div>
-          <p class="research-desc">
-            Tested how different pollutants — oil, detergent, and salt — affect
-            plant growth and health. Ran experiments measuring things like
-            germination rate and leaf development under different contamination
-            conditions.
-          </p>
-          <div class="tags" style="margin-top: 1rem">
-            <span class="tag tag-teal">Biology</span
-            ><span class="tag tag-teal">Pollution</span
-            ><span class="tag tag-teal">IB Science</span>
-          </div>
-        </div>
-      </div>
-    </section>
+          <a class="folder" href="/research/" data-color="#f5c84b" style="left: 72%; top: 36%;">
+            <span class="folder-icon" style="color: #f5c84b;">
+              <svg viewBox="0 0 180 156" fill="none" aria-hidden="true">
+                <path d="M10 30 L10 138 Q10 146 18 146 L162 146 Q170 146 170 138 L170 50 Q170 42 162 42 L92 42 L78 28 Q74 24 70 24 L18 24 Q10 24 10 30 Z" fill="currentColor" stroke="#0a0a0a" stroke-width="3" stroke-linejoin="round"/>
+                <path d="M22 50 L162 50 L168 138 Q168 142 162 142 L20 142 Q14 142 14 138 Z" fill="rgba(0,0,0,0.06)" stroke="#0a0a0a" stroke-width="3" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="folder-tag">what I dig into</span>
+            <span class="folder-label">research</span>
+          </a>
 
-    <!-- PROJECTS -->
-    <section id="projects">
-      <div class="sec-label reveal">
-        <span class="sec-num">03</span>
-        <h2 class="sec-title">Projects</h2>
-        <div class="sec-line"></div>
-      </div>
-      <div
-        class="project-filters reveal"
-        role="tablist"
-        aria-label="Project filters"
-      >
-        <button class="filter-btn active" data-filter="all" type="button">
-          All
-        </button>
-        <button class="filter-btn" data-filter="tech" type="button">
-          Tech
-        </button>
-        <button class="filter-btn" data-filter="ai" type="button">AI</button>
-        <button class="filter-btn" data-filter="saas" type="button">
-          SaaS
-        </button>
-        <button class="filter-btn" data-filter="leadership" type="button">
-          Leadership
-        </button>
-      </div>
-      <div class="proj-grid">
-        <div
-          class="proj-card reveal"
-          data-project="tech leadership"
-          data-link="https://github.com/goktugksoyturk/WebsiteAPS"
-          tabindex="0"
-          role="link"
-          aria-label="Open A Paso Seguro repository"
-        >
-          <div class="proj-glow" style="background: #38d9c0"></div>
-          <div class="proj-n">01</div>
-          <div class="proj-name">A Paso Seguro</div>
-          <div class="proj-sub">Android App · UN SDG 11</div>
-          <p class="proj-desc">
-            An Android app helping people navigate nightlife safely in San Luis
-            Potosí. Built with a team spread across 5 countries, tied to UN SDG
-            11.
-          </p>
-          <div class="proj-foot">
-            <div class="tags">
-              <span class="tag">Android</span
-              ><span class="tag tag-teal">SDG 11</span>
-            </div>
-            <span class="proj-arrow">↗</span>
-          </div>
-        </div>
-        <div
-          class="proj-card reveal"
-          data-project="tech ai saas"
-          data-link="https://mr-appointment.vercel.app"
-          tabindex="0"
-          role="link"
-          aria-label="Open Mr Appointment website"
-        >
-          <div class="proj-glow" style="background: #f0c040"></div>
-          <div class="proj-n">02</div>
-          <div class="proj-name">Mr Appointment</div>
-          <div class="proj-sub">AI Automation · Healthcare</div>
-          <p class="proj-desc">
-            AI-powered system that automates appointment booking and reduces
-            no-shows for clinics by streamlining scheduling and reminders.
-          </p>
-          <div class="proj-foot">
-            <div class="tags">
-              <span class="tag">AI</span><span class="tag">Automation</span
-              ><span class="tag">Healthcare</span>
-            </div>
-            <span class="proj-arrow">↗</span>
-          </div>
-        </div>
-        <div
-          class="proj-card reveal"
-          data-project="tech saas"
-          data-link="https://comsinves.tech"
-          tabindex="0"
-          role="link"
-          aria-label="Open Comsinves website"
-        >
-          <div class="proj-glow" style="background: #e8453c"></div>
-          <div class="proj-n">03</div>
-          <div class="proj-name">Comsinves</div>
-          <div class="proj-sub">Investment Intelligence Platform</div>
-          <p class="proj-desc">
-            All-in-one platform to track, manage, and understand investments
-            across different asset classes in one clear dashboard.
-          </p>
-          <div class="proj-foot">
-            <div class="tags">
-              <span class="tag">SaaS</span><span class="tag">Investments</span
-              ><span class="tag">Analytics</span>
-            </div>
-            <span class="proj-arrow">↗</span>
-          </div>
-        </div>
-        <div class="proj-card reveal" data-project="tech leadership">
-          <div class="proj-glow" style="background: #38d9c0"></div>
-          <div class="proj-n">04</div>
-          <div class="proj-name">Tech 4 Everyone</div>
-          <div class="proj-sub">Education Initiative</div>
-          <p class="proj-desc">
-            Taught kids aged 9–13 how to code through small projects. Tried to
-            keep it practical and actually fun rather than just theory.
-          </p>
-          <div class="proj-foot">
-            <div class="tags">
-              <span class="tag">Education</span><span class="tag">Coding</span>
-            </div>
-            <span class="proj-arrow">↗</span>
-          </div>
-        </div>
-        <div
-          class="proj-card reveal"
-          data-project="tech"
-          data-link="https://github.com/goktugksoyturk/jmb311"
-          tabindex="0"
-          role="link"
-          aria-label="Open JMB311 repository"
-        >
-          <div class="proj-glow" style="background: #22d3ee"></div>
-          <div class="proj-n">05</div>
-          <div class="proj-name">JMB311</div>
-          <div class="proj-sub">Bike Shop Website</div>
-          <p class="proj-desc">
-            A website for a bike shop focused on clear product presentation,
-            service visibility, and smooth customer navigation.
-          </p>
-          <div class="proj-foot">
-            <div class="tags">
-              <span class="tag">Web</span><span class="tag">Frontend</span
-              ><span class="tag">Retail</span>
-            </div>
-            <span class="proj-arrow">↗</span>
-          </div>
-        </div>
-      </div>
-    </section>
+          <a class="folder" href="/fun/" data-color="#f5c84b" style="left: 16%; top: 56%;">
+            <span class="folder-icon" style="color: #f5c84b;">
+              <svg viewBox="0 0 180 156" fill="none" aria-hidden="true">
+                <path d="M10 30 L10 138 Q10 146 18 146 L162 146 Q170 146 170 138 L170 50 Q170 42 162 42 L92 42 L78 28 Q74 24 70 24 L18 24 Q10 24 10 30 Z" fill="currentColor" stroke="#0a0a0a" stroke-width="3" stroke-linejoin="round"/>
+                <path d="M22 50 L162 50 L168 138 Q168 142 162 142 L20 142 Q14 142 14 138 Z" fill="rgba(0,0,0,0.06)" stroke="#0a0a0a" stroke-width="3" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="folder-tag">outside of code</span>
+            <span class="folder-label">fun</span>
+          </a>
 
-    <!-- SKILLS -->
-    <section id="skills" class="alt">
-      <div class="sec-label reveal">
-        <span class="sec-num">04</span>
-        <h2 class="sec-title">Skills</h2>
-        <div class="sec-line"></div>
-      </div>
-      <div class="skills-wrap reveal">
-        <div>
-          <div class="skill-cat-title">Technical</div>
-          <div class="pills">
-            <span class="pill">JavaScript</span><span class="pill">React</span
-            ><span class="pill">HTML / CSS</span>
-            <span class="pill">Android Studio</span
-            ><span class="pill">Java</span><span class="pill">REST APIs</span>
-            <span class="pill">Postman</span
-            ><span class="pill">Git / GitHub</span>
-            <span class="pill">Machine Learning</span
-            ><span class="pill">Algorithms & DS</span
-            ><span class="pill">Cryptography</span>
-          </div>
-          <div class="skill-cat-title">Business & Strategy</div>
-          <div class="pills">
-            <span class="pill">Project Management</span
-            ><span class="pill">Growth Strategy</span>
-            <span class="pill">Lead Generation</span
-            ><span class="pill">A/B Testing</span>
-            <span class="pill">Social Media Marketing</span
-            ><span class="pill">Risk Management</span>
-            <span class="pill">Investor Relations</span
-            ><span class="pill">Notion</span>
-          </div>
-        </div>
-        <div>
-          <div class="skill-cat-title">Languages</div>
-          <div class="lang-row">
-            <div class="lang-card">
-              <span class="lang-flag">🇹🇷</span>
-              <div class="lang-name">Turkish</div>
-              <div class="lang-level">Native</div>
-            </div>
-            <div class="lang-card">
-              <span class="lang-flag">🇪🇸</span>
-              <div class="lang-name">Spanish</div>
-              <div class="lang-level">Fluent · HL</div>
-            </div>
-            <div class="lang-card">
-              <span class="lang-flag">🇬🇧</span>
-              <div class="lang-name">English</div>
-              <div class="lang-level">Fluent · HL</div>
-            </div>
-            <div class="lang-card">
-              <span class="lang-flag">🇫🇷</span>
-              <div class="lang-name">French</div>
-              <div class="lang-level">Elementary</div>
-            </div>
-          </div>
-          <div class="skill-cat-title" style="margin-top: 2rem">
-            Soft Skills
-          </div>
-          <div class="pills">
-            <span class="pill">Cross-cultural Leadership</span
-            ><span class="pill">Critical Thinking</span>
-            <span class="pill">Communication</span
-            ><span class="pill">Team Building</span
-            ><span class="pill">Research & Analysis</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CERTS -->
-    <section>
-      <div class="sec-label reveal">
-        <span class="sec-num">05</span>
-        <h2 class="sec-title">Certifications</h2>
-        <div class="sec-line"></div>
-      </div>
-      <div class="certs-grid">
-        <a
-          class="cert-card reveal cert-link"
-          href="https://verify.skilljar.com/c/53txmuz8pgyo"
-          target="_blank"
-          rel="noopener noreferrer"
-          ><div class="cert-issuer">Anthropic</div>
-          <div class="cert-name">Claude Code</div>
-          <div class="cert-date">Mar 2026 · AI Coding Workflows</div></a
-        >
-        <a
-          class="cert-card reveal cert-link"
-          href="https://verify.skilljar.com/c/r3hp3iyk992i"
-          target="_blank"
-          rel="noopener noreferrer"
-          ><div class="cert-issuer">Anthropic</div>
-          <div class="cert-name">Claude 101</div>
-          <div class="cert-date">Foundations · Prompt Engineering</div></a
-        >
-        <a
-          class="cert-card reveal cert-link"
-          href="https://my.amplifyme.com/certificate/daec0521-7282-477f-b92e-e64e551c1ff1"
-          target="_blank"
-          rel="noopener noreferrer"
-          ><div class="cert-issuer">AmplifyME</div>
-          <div class="cert-name">Finance Accelerator</div>
-          <div class="cert-date">Feb 2026 · Top 17/100 Sell Side</div></a
-        >
-        <a
-          class="cert-card reveal cert-link"
-          href="https://app.teachfloor.com/ludi/certificates/PrQJkx1GwNzg30LR"
-          target="_blank"
-          rel="noopener noreferrer"
-          ><div class="cert-issuer">Ludi</div>
-          <div class="cert-name">Startup Co-Founder Job Simulation</div>
-          <div class="cert-date">Jun 2025</div></a
-        >
-        <a
-          class="cert-card reveal cert-link"
-          href="https://www.coursera.org/account/accomplishments/verify/DCAXMYVHB416"
-          target="_blank"
-          rel="noopener noreferrer"
-          ><div class="cert-issuer">Meta · Coursera</div>
-          <div class="cert-name">
-            Meta Introduction to Front-End Development
-          </div>
-          <div class="cert-date">Apr 2026</div></a
-        >
-        <a
-          class="cert-card reveal cert-link"
-          href="https://certificates.cs50.io/3ff3d44b-8cac-4486-92b5-12dd41d5f246.pdf?size=letter"
-          target="_blank"
-          rel="noopener noreferrer"
-          ><div class="cert-issuer">CS50 · Harvard</div>
-          <div class="cert-name">CS50x Puzzle Day 2024</div>
-          <div class="cert-date">Apr 2024 · Logical Reasoning</div></a
-        >
-      </div>
-    </section>
-
-    <!-- VOLUNTEER -->
-    <section class="alt">
-      <div class="sec-label reveal">
-        <span class="sec-num">06</span>
-        <h2 class="sec-title">Volunteering</h2>
-        <div class="sec-line"></div>
-      </div>
-      <div class="vol-grid">
-        <div class="vol-card reveal">
-          <div class="vol-org">Tech 4 Everyone</div>
-          <div class="vol-role">Coding Tutor</div>
-          <p class="vol-desc">
-            Taught coding to kids ages 9–13 — used small projects to keep things
-            hands-on. Nov 2024 – Jan 2025.
-          </p>
-        </div>
-        <div class="vol-card reveal">
-          <div class="vol-org">Colegio Internacional Terranova</div>
-          <div class="vol-role">Disaster Relief Volunteer</div>
-          <p class="vol-desc">
-            Helped collect and transport donations — food, water, clothes — for
-            communities hit by flooding in La Huasteca SLP. Oct–Nov 2025.
-          </p>
-        </div>
-        <div class="vol-card reveal">
-          <div class="vol-org">ESL Initiative</div>
-          <div class="vol-role">English Language Tutor</div>
-          <p class="vol-desc">
-            Teaching English to immigrants — conversational and academic.
-            Language access matters a lot, especially when you've been the one
-            needing it.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- EDUCATION -->
-    <section>
-      <div class="sec-label reveal">
-        <span class="sec-num">07</span>
-        <h2 class="sec-title">Education</h2>
-        <div class="sec-line"></div>
-      </div>
-      <div class="edu-stack">
-        <div class="edu-card reveal">
-          <div>
-            <div class="edu-school">International Baccalaureate</div>
-            <div class="edu-prog">IB Diploma Programme (DP)</div>
-            <p class="edu-desc">
-              Doing the IB Diploma in San Luis Potosí. Founded the Table Tennis
-              Club, play Varsity Soccer, and currently active as a BTM Startup
-              House member in a startup-house style builder community. Subjects:
-              Math AA SL, Spanish B HL, English A HL, History HL, Biology SL,
-              French SL.
-            </p>
-            <div class="tags">
-              <span class="tag">Math AA SL</span
-              ><span class="tag">Spanish B HL</span
-              ><span class="tag">English A HL</span>
-              <span class="tag">History HL</span
-              ><span class="tag">Extended Essay</span
-              ><span class="tag">BTM Startup House Member</span>
-            </div>
-          </div>
-          <div class="exp-aside">
-            <div class="exp-date">Sep 2024<br />May 2026</div>
-            <span class="exp-badge badge-live">● In Progress</span>
-          </div>
+          <a class="folder" href="/contact/" data-color="#f5c84b" style="left: 60%; top: 60%;">
+            <span class="folder-icon" style="color: #f5c84b;">
+              <svg viewBox="0 0 180 156" fill="none" aria-hidden="true">
+                <path d="M10 30 L10 138 Q10 146 18 146 L162 146 Q170 146 170 138 L170 50 Q170 42 162 42 L92 42 L78 28 Q74 24 70 24 L18 24 Q10 24 10 30 Z" fill="currentColor" stroke="#0a0a0a" stroke-width="3" stroke-linejoin="round"/>
+                <path d="M22 50 L162 50 L168 138 Q168 142 162 142 L20 142 Q14 142 14 138 Z" fill="rgba(0,0,0,0.06)" stroke="#0a0a0a" stroke-width="3" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="folder-tag">say hi</span>
+            <span class="folder-label">contact</span>
+          </a>
         </div>
 
-        <div class="edu-card reveal">
-          <div>
-            <div class="edu-school">Builder Community</div>
-            <div class="edu-prog">BTM Startup House Member</div>
-            <p class="edu-desc">
-              Part of BTM Startup House, a startup-focused builder community
-              where I collaborate with other members on product thinking,
-              execution, and shipping ideas faster.
-            </p>
-            <div class="tags">
-              <span class="tag">Startups</span
-              ><span class="tag">Product Building</span
-              ><span class="tag">Community</span>
-            </div>
-          </div>
-          <div class="exp-aside">
-            <div class="exp-date">2026<br />Present</div>
-            <span class="exp-badge badge-live">● Active</span>
-          </div>
+        <div class="scroll-cue">
+          <span>more below</span>
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- CONTACT -->
-    <div class="contact-wrap" id="contact">
-      <div class="contact-big reveal">
-        LET'S BUILD<br /><span class="accent">SOMETHING.</span>
-      </div>
-      <p class="contact-sub reveal">
-        Feel free to reach out — always open to interesting conversations.
-      </p>
-      <div class="contact-btns reveal">
-        <a
-          href="/cdn-cgi/l/email-protection#e88f87839c9d8f839b87919c9d9a83a88f85898184c68b8785"
-          class="btn btn-gold"
-          >Email Me ↗</a
-        >
-        <a
-          href="https://www.linkedin.com/in/göktuğ-kaan-soytürk/"
-          target="_blank"
-          class="btn btn-ghost"
-          >LinkedIn ↗</a
-        >
-        <a
-          href="https://github.com/goktugksoyturk"
-          target="_blank"
-          class="btn btn-ghost"
-          >GitHub ↗</a
-        >
-        <button class="btn btn-ghost" id="copyEmailBtn" type="button">
-          Copy Email
-        </button>
-      </div>
-    </div>
+      <section class="home-strip">
+        <div class="container">
+          <p class="eyebrow">a small note</p>
+          <h2 class="quote serif">"Most things are built by people who just decided to start. That's it. That's the whole secret."</h2>
+        </div>
+      </section>
+    </main>
 
-    <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-    <footer>
-      <span>© 2026 Göktuğ Kaan Soytürk</span>
-      <span>Built with HTML · CSS · JS</span>
+    <footer class="site-footer">
+      <span>© Göktuğ Kaan Soytürk · San Luis Potosí, MX</span>
+      <span>
+        <a href="https://github.com/goktugksoyturk" target="_blank" rel="noopener">github</a> ·
+        <a href="https://www.linkedin.com/in/göktuğ-kaan-soytürk/" target="_blank" rel="noopener">linkedin</a>
+      </span>
     </footer>
 
-    <script
-      data-cfasync="false"
-      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
-    ></script>
-    <script src="script.js"></script>
+    <script>
+      (function () {
+        if (!document.documentElement.classList.contains("intro-active")) return;
+        var overlay = document.querySelector(".intro-overlay");
+        if (!overlay) return;
+        var done = false;
+        function finish() {
+          if (done) return;
+          done = true;
+          document.documentElement.classList.remove("intro-active");
+          overlay.remove();
+        }
+        overlay.addEventListener("animationend", function (e) {
+          if (e.animationName === "introExit") finish();
+        });
+        setTimeout(finish, 4500);
+      })();
+    </script>
+    <script src="/assets/js/utils.js" defer></script>
+    <script src="/assets/js/theme.js" defer></script>
+    <script src="/assets/js/nav.js" defer></script>
+    <script src="/assets/js/role-cycler.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/matter-js@0.20.0/build/matter.min.js" defer></script>
+    <script src="/assets/js/physics.js" defer></script>
   </body>
 </html>
